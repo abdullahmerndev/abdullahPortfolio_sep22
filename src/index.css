@@ -1,0 +1,19 @@
+/* Initial reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {list-style-type: none;}
+a {text-decoration: none;}
+
+/* Custom Fonts: Josefin Sans */
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap'); */
+/* Custom Fonts: Merriweather */
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap'); */
+
+/* body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Merriweather', serif;
+} */
