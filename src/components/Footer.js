@@ -20,9 +20,9 @@ const Footer = () => {
                 <nav className="interwebs">
                 <h4>interwebs</h4>
                     <ul>
-                        <li><a href="https://github.com/abdullahmerndev">github</a></li>
-                        <li><a href="https://twitter.com/abby_fsd">twitter</a></li>
-                        <li><a href="https://www.linkedin.com/in/abdullah-abdullah-75221b114/">LinkedIn</a></li>
+                        <li><a href="https://github.com/abdullahmerndev"><i className="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/abby_fsd"><i className="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/abdullah-abdullah-75221b114/"><i className="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                 </nav>
                 <div className="brief-contact">
@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <p>&copy; 2022. Designed &amp; developed by <Link to="/about">Abdullah</Link></p>
+            <p>&copy; 2022. Designed &amp; developed by <Link to="/about"><span>Abdullah</span></Link></p>
         </footer>
     );
 }

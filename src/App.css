@@ -14,6 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-y: hidden;
     /* background-color: #181e20; */
 }
 .splash-screen #profile-pic {
@@ -160,6 +161,7 @@ body {
     align-items: center;
     background-color: ghostwhite;
     padding: 1rem;
+    position: relative;
 }
 .navbar .navbar__list {
     display: flex;
@@ -182,6 +184,9 @@ body {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     color: #000;
+}
+.navbar .mobile-menu {
+    display: none;
 }
 /* Navbar styles Ends here */
 
@@ -336,6 +341,7 @@ body {
     font-size: 3.5rem;
     /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
     /* clip-path: polygon(0 0, 100% 0, 75% 50%, 100% 100%, 0 100%, 0% 50%); */
+    /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
     padding: 4rem 2rem;
 }
 .projects-section .mid-col, .about-section .about-content, .contact-section .contact-content {
@@ -419,10 +425,20 @@ body {
 /* AboutSection */
 .about-section {
     background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    font-size: 1.3rem;
+    color: #303137;
+    line-height: 1.8rem;
     display: grid;
     grid-template-columns: 1fr 2.5fr 0.5fr;
+    /* grid-template-columns: 0.5fr 1fr 0.5fr; */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    position: relative;
+}
+.about-section > div {
+    margin: auto 1.8rem;
+    /* background-color: pink; */
 }
 .about-section .title, .contact-section .title {
     font-size: 1.8rem;
@@ -431,13 +447,8 @@ body {
     font-size: 3.5rem;
     padding: 4rem 2rem;   
 }
-.about-section .about-content {
-    font-size: 1.3rem;
-    color: #303137;
-    line-height: 1.8rem;
-}
-.about-section .about-content .greet {margin-bottom: 1rem;}
-.about-section .about-content strong {
+.about-section .greet {margin-bottom: 1rem;}
+.about-section strong {
     text-transform: uppercase;
     font-size: 1.1rem;
     margin-top: .5rem;
@@ -513,7 +524,7 @@ body {
 }
 .footer .footer__nav ul li {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 300;
     text-transform: capitalize;
     margin-bottom: .8rem;
 }
@@ -522,7 +533,14 @@ body {
     font-size: 1rem;
     font-weight: 700;
 }
-.footer .interwebs ul {margin-top: 1rem;}
+.footer .wrapper .interwebs ul {
+    display: flex;
+    margin-top: 1.8rem;
+}
+.footer .wrapper .interwebs ul li {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
 .footer .interwebs ul li {
     margin-bottom: .8rem;
     text-transform: capitalize;
@@ -539,6 +557,7 @@ body {
     color: rgba(53, 53, 54, 0.158);
 }
 .footer a {color: #a3a7aa;}
+.footer span {color: rgb(151, 79, 233) !important;}
 
 /* %%%%%%%%%%%%%% RWD %%%%%%%%%%%%%% */
 @media screen and (max-width: 960px) {
@@ -623,8 +642,32 @@ body {
 /* ----------------------------------------- */
 
 /* Mobile screens */
-@media (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 490px) {
     .navbar .navbar__list {display: none;}
+    .navbar .mobile-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 99;
+        color: #34da66;
+    }
+    .navbar__list--visible {
+        height: 100vh;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        padding: 3.8rem 2.5rem 0;
+        width: 60%;
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar__list--visible .navbar__item {
+        margin-bottom: 1.8rem;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .navbar__list--visible .navbar__item a {color: #fff;}
     
     .herounit {
         display: grid;
