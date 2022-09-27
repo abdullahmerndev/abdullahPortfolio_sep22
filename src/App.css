@@ -14,18 +14,21 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow-y: hidden;
-    /* background-color: #181e20; */
+    overflow: hidden;
+     /*background-color: #181e20; */
 }
 .splash-screen #profile-pic {
-    background-image: url("./images/abdullah.jpg");
+    background-image: url("./images/abdullah2.jpg");
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 400px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
     justify-self: center;
-    height: 100%;
-    position: relative;
+    /*position: relative;*/
     animation: profile_pic_animation 1.5s ease-in-out;
     transition: all 1s ease-in-out;
 }
@@ -55,10 +58,10 @@ body {
     justify-content: center;
     padding: 2.75rem;
     height: 100%;
-    /* background-color: pink; */
+     /*background-color: pink; */
     /* box-shadow: -4px 0 6px rgba(0,0,0,0.5); */
-    margin-left: -28px;
-    z-index: 1;
+    /*margin-left: -28px;*/
+    /*z-index: 1;*/
 }
 
 .splash-screen .intro .intro__greetings {
@@ -606,6 +609,32 @@ body {
 
 /* %%%%%%%%%%%%%% RWD %%%%%%%%%%%%%% */
 @media screen and (max-width: 960px) {
+    /* splash-screen */
+    .splash-screen {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: scroll;
+    padding: 2rem;
+     /*background-color: #181e20; */
+    }
+    .splash-screen #profile-pic {
+        width: 275px;
+        height: 275px;
+        border-radius: 50%;
+    }
+    .splash-screen .intro {
+    padding: 2rem;
+    text-align: justify;
+    }
+    .splash-screen .intro .intro__bio {
+        font-size: 1.65rem;
+        line-height: 2.3rem;
+    }
+    /* End of splash-screen styling */
+
     .herounit {
         /* display: flex;
         flex-direction: column; */
@@ -688,6 +717,36 @@ body {
 
 /* Mobile screens */
 @media screen and (max-width: 490px) {
+    /* splash-screen */
+    .splash-screen {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*justify-content: center;*/
+        align-items: center;
+        height: 100vh;
+        overflow: scroll;
+        padding: 1.5rem;
+         /*background-color: #181e20; */
+    }
+    .splash-screen #profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .splash-screen .intro {
+        padding: 1.4rem;
+        /*text-align: justify;*/
+    }
+    .splash-screen .intro .intro__greetings {
+        font-size: 1.4rem;
+        margin: 2rem auto 2rem 0;    
+    }
+    .splash-screen .intro .intro__bio {
+        font-size: 1.45rem;
+        line-height: 2.2rem;
+    }
+    /* End of splash-screen styling */
+
     .navbar .navbar__list {display: none;}
     .navbar .mobile-menu {
         display: block;

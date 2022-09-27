@@ -1,12 +1,12 @@
 import Splashscreen from "./components/Splashscreen";
 import './App.css';
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 const App = () => {
     return (
         <>
-            <Splashscreen delay="3000" />
-            <Footer />        
+            <Splashscreen delay="10000" />
+            {/*<Footer />*/}        
         </>
     );
 }
