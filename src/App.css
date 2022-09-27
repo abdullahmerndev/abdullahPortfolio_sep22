@@ -321,6 +321,51 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* components: projects.js */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /*background-color: hotpink;*/
+    padding: 2rem;
+}
+.projects .projects__title {
+    font-size: 2.8rem;
+}
+.projects .projects__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    /*grid-gap: .5rem;*/
+}
+.projects .projects__list .projects__item {
+    margin: .8rem;
+}
+.projects .projects__list .projects__item .projects__thumbnail {
+    background-image: url("https://images.unsplash.com/photo-1514474959185-1472d4c4e0d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 200px;
+}
+.projects .projects__list .projects__item .projects__thumbnail.bugtracking {
+    background-image: url("https://miro.medium.com/max/510/1*xpHct9a23LDrZQoUZn87hA.png");
+}
+.projects .projects__list .projects__item .projects__thumbnail.acad-recs {
+    background-image: url("https://images.unsplash.com/photo-1554902843-260acd0993f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+}
+.projects .projects__list .projects__item .projects__thumbnail.quiz {
+    background-image: url("https://media.istockphoto.com/photos/quiz-picture-id1312747110?b=1&k=20&m=1312747110&s=170667a&w=0&h=EJa2PmWYZTuvdpdYltvfShRxpAhRA3xvfhBsIN9tLfA=");
+}
+.projects .projects__list .projects__item .projects__thumbnail.travelogue {
+    background-image: url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+}
+.projects .projects__list .projects__item .projects__name {
+    text-transform: capitalize;
+    padding: 1rem 0;
+}
+
+/* components styles ends here */
+
 /* SECTIONS: ProjectsSection, AboutSection */
 .projects-section {
     background-color: rgba(0, 0, 0, 0.9);
