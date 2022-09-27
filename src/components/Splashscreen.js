@@ -1,17 +1,17 @@
-// import Home from "./Home";
-// import { useState, useEffect } from "react";
+import Home from "./Home";
+import { useState, useEffect } from "react";
 
 const Splashscreen = (props) => {
-    {/*const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setVisible(false);
         }, [props.delay]);
         return () => clearTimeout(timer)
-    }, [props.delay]);*/}
+    }, [props.delay]);
 
-    return (
+    return visible ? (
         <div className="splash-screen">
             <div id="profile-pic"></div>
             <div className="intro">
@@ -20,7 +20,7 @@ const Splashscreen = (props) => {
                 {/* <hr id="time-line" /> */}
             </div>
         </div>
-    );
+    ) : <Home />;
 }
 
 export default Splashscreen;
