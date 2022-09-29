@@ -332,11 +332,18 @@ body {
 }
 
 /* components: projects.js */
-.projects {
+.projects, .resume {
     display: grid;
     grid-template-columns: 1fr 2fr;
     /*background-color: hotpink;*/
     padding: 2rem;
+}
+.projects > strong {
+    text-transform: uppercase;
+    font-size: .98rem;
+    font-weight: 400;
+    text-decoration: underline;
+    letter-spacing: .5px;
 }
 .projects .projects__title {
     font-size: 2.8rem;
@@ -372,6 +379,21 @@ body {
 .projects .projects__list .projects__item .projects__name {
     text-transform: capitalize;
     padding: 1rem 0;
+}
+.projects .projects__list .projects__item .projects__name a {
+    color: inherit;
+}
+.projects .projects__list .projects__item .projects__name a:hover{border-bottom: 1px solid;}
+.projects .projects__list .projects__item .projects__desc {
+    line-height: 1.2;
+    font-size: 1.1rem;
+}
+
+/* Resume.js */
+.resume .resume__wrapper {
+    background-color: pink;
+    height: 100vh;
+    /*width: 100%;*/
 }
 
 /* components styles ends here */
@@ -420,10 +442,18 @@ body {
     line-height: 1.25rem;
     /* background-color: #34da66; */
 }
+.projects-section .mid-col strong#wip {
+    color: #fff;
+    padding-left: 1.65rem;
+}
 .projects-section .mid-col article .app-name{
     color: #fff;
     text-transform: capitalize;
     font-size: 1.25rem;
+}
+.projects-section .mid-col article .app-name a {color: #fff;}
+.projects-section .mid-col article .app-name a:hover {
+    border-bottom: 1px solid;
 }
 .projects-section .mid-col article .app-description {
     color: #fff;
@@ -691,6 +721,14 @@ body {
         background-color: rgba(139, 113, 113, 0.466);
         border-radius: 50%;
     }
+
+    /* Components: Projects.js */
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
     .footer {
         display: grid;
         /* grid-template-columns: repeat(4, 1fr); */
@@ -899,6 +937,29 @@ body {
         font-size: 1.1rem;
         margin-top: .8rem;
     }
+
+    /* Components: Projects.js */
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*justify-content: center;*/
+        padding: 2rem;
+    }
+    .projects .projects__title {
+        font-size: 2.4rem;
+    }
+    .projects .projects__list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .projects .projects__list .projects__item {
+        margin: .4rem;
+    }
+    .projects .projects__list .projects__item .projects__desc {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
 
     /* Footer styles */
     .footer {

@@ -4,7 +4,10 @@ const Resume = () => {
     return (
         <>
             <Navbar />
-            <h1>My Awesome Resume!!</h1>
+            <div className="resume">
+                <h1 className="resume__title">My Resume</h1>
+                <div className="resume__wrapper"></div>
+            </div>
         </>
     );
 }
