@@ -9,18 +9,18 @@ const ContactSection = () => {
                 <ul className="modes-of-contact">
                     <li>
                         <h4>email</h4>
-                        <p>abdullahmerndev@gmail.com</p>
+                        <p>person@example.com</p>
                     </li>
                     <li>
                         <h4>mobile</h4>
-                        <p><a href="mobile">+91-912 160 5014</a></p>
+                        <p><a href="mobile">+91-987 654 3210</a></p>
                     </li>
                     <li>
                         <h4>web conferencing</h4>
                         <ul id="web-conferencing">
-                            <li>Skype: abdullah@skype.com</li>
-                            <li>Zoom: abdullahmerndev@gmail</li>
-                            <li>Google Meet: abdullahmerndev@gmail</li>
+                            <li>Skype: myself@skype.com</li>
+                            <li>Zoom: myself@gmail</li>
+                            <li>Google Meet: myself@gmail</li>
                         </ul>
                     </li>
                     <li>
